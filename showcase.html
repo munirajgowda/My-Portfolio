@@ -38,6 +38,26 @@
 			}
 		}
 	</style>
+	<script>
+		function handleRoute() {
+		  const path = location.hash.slice(1); // Get the hash from the URL
+		  const content = document.getElementById('content');
+		  
+		  switch (path) {
+			case '':
+			  content.innerHTML = '<h1>Home</h1><p>Welcome to my portfolio.</p>';
+			  break;
+			case 'about':
+			  content.innerHTML = '<h1>About Me</h1><p>This is the about page.</p>';
+			  break;
+			default:
+			  content.innerHTML = '<h1>404</h1><p>Page not found.</p>';
+		  }
+		}
+	
+		window.addEventListener('hashchange', handleRoute);
+		window.addEventListener('load', handleRoute);
+	  </script>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
