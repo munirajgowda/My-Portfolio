@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Muniraj B R</title>
+  <link rel="icon" href="assets/img/portfolio-icon.png" type="image/x-icon">
   <link rel="stylesheet" href="assets/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/newcss.css" />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
@@ -14,7 +15,9 @@
 <body oncontextmenu="return false">
   <header class="header" id="header">
     <nav class="nav container">
-      <a href="#" class="nav__logo">Muniraj B R</a>
+      <a class="nav__logo">
+        <img src="assets/img/portfolio-icon-croped.png" alt="logo"/>
+        Muniraj B R</a>
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list grid">
           <li class="nav__item">
@@ -597,25 +600,5 @@
   <script src="https://kit.fontawesome.com/2205d59d52.js" crossorigin="anonymous"></script>
   <script src="assets/ptj.js"></script>
 </body>
-<script>
-  function handleRoute() {
-    const path = location.hash.slice(1); // Get the hash from the URL
-    const content = document.getElementById('content');
-    
-    switch (path) {
-      case '':
-        content.innerHTML = '<h1>Home</h1><p>Welcome to my portfolio.</p>';
-        break;
-      case 'about':
-        content.innerHTML = '<h1>About Me</h1><p>This is the about page.</p>';
-        break;
-      default:
-        content.innerHTML = '<h1>404</h1><p>Page not found.</p>';
-    }
-  }
-
-  window.addEventListener('hashchange', handleRoute);
-  window.addEventListener('load', handleRoute);
-</script>
 
 </html>
